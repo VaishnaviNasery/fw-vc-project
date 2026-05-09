@@ -19,8 +19,8 @@ Frank-Wolfe (SFW-Paper) baseline.
 fw_vc_project/
 ├── run.py                        # Main entry point — runs all experiments
 ├── requirements.txt
-├── results/                      # CSV outputs (auto-generated)
-├── plots/                        # PNG figures (auto-generated)
+├── results/                      # CSV outputs 
+├── plots/                        # PNG figures 
 └── src/
     ├── data/
     │   └── datasets.py           # Dataset loaders (Digits, Breast Cancer)
@@ -38,7 +38,7 @@ fw_vc_project/
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/fw_vc_project.git
+git clone https://github.com/VaishnaviNasery/fw_vc_project.git
 cd fw_vc_project
 pip install -r requirements.txt
 python run.py
