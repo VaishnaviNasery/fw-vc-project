@@ -1,7 +1,7 @@
 # FW-VC: Frank-Wolfe with Variance-Controlled Step Size
 
 **COMPSCI 651 – Optimization | University of Massachusetts Amherst**  
-Jiewen Luo · Vaishnavi Nasery · Rufina Lourdes
+Jiewen Luo · Vaishnavi Nasery · Rufina Lourdes Rajesh
 
 ## Overview
 
