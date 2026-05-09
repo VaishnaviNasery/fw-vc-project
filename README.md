@@ -38,7 +38,7 @@ fw_vc_project/
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/fw_vc_project.git
+git clone https://github.com/VaishnaviNasery/fw_vc_project.git
 cd fw_vc_project
 pip install -r requirements.txt
 python run.py
