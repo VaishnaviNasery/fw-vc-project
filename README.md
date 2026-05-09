@@ -1,7 +1,7 @@
 # FW-VC: Frank-Wolfe with Variance-Controlled Step Size
 
 **COMPSCI 651 – Optimization | University of Massachusetts Amherst**  
-Jiewen Luo · Vaishnavi Nasery · Rufina Lourdes
+Jiewen Luo · Vaishnavi Nasery · Rufina Lourdes Rajesh
 
 ## Overview
 
@@ -19,8 +19,8 @@ Frank-Wolfe (SFW-Paper) baseline.
 fw_vc_project/
 ├── run.py                        # Main entry point — runs all experiments
 ├── requirements.txt
-├── results/                      # CSV outputs (auto-generated)
-├── plots/                        # PNG figures (auto-generated)
+├── results/                      # CSV outputs 
+├── plots/                        # PNG figures 
 └── src/
     ├── data/
     │   └── datasets.py           # Dataset loaders (Digits, Breast Cancer)
