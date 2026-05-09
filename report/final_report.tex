@@ -1,7 +1,7 @@
 % ============================================================
 % COMPSCI 651 Optimization — Final Project Report
 % Frank-Wolfe Variance-Controlled Sparse SGD
-% Jiewen Luo, Vaishnavi Nasery, Rufina Lourdes
+% Jiewen Luo, Vaishnavi Nasery, Rufina Lourdes Rajesh
 %
 % Page limit: 1 + 2N = 7 pages (N=3 authors), excluding references
 % Overleaf: compile with pdflatex
@@ -45,7 +45,7 @@
 \begin{center}
   {\Large \textbf{Frank-Wolfe with Variance-Controlled Step Size for
   Sparse Stochastic Optimization}}\\[6pt]
-  {\normalsize Jiewen Luo \quad Vaishnavi Nasery \quad Rufina Lourdes}\\[2pt]
+  {\normalsize Jiewen Luo \quad Vaishnavi Nasery \quad Rufina Lourdes Rajesh}\\[2pt]
   {\small COMPSCI 651 – Optimization, University of Massachusetts Amherst}\\[4pt]
   \rule{\linewidth}{0.4pt}
 \end{center}
@@ -374,17 +374,17 @@ early in training.
 Sparsity = fraction of $|w_i| \leq 10^{-6}$.
 Constrained methods (rows 3--5) enforce $\norm{x}_1 \leq R$.}
 \label{tab:digits}
-\small
-\begin{tabular}{lccccc}
+\footnotesize
+\begin{tabular}{lcccc}
 \toprule
-Method & Test Loss & Test Acc & Sparsity & NNZ & $\norm{w}_1$ \\
+Method & Test Loss & Test Acc & Sparsity & NNZ \\
 \midrule
-SGD           & 0.0478 & 99.4\% & 0.046 & 62 & 12.27 \\
-Adam          & 0.0409 & 99.7\% & 0.046 & 62 & 16.07 \\
+SGD           & 0.0478 & 99.4\% & 0.046 & 62 \\
+Adam          & 0.0409 & 99.7\% & 0.046 & 62 \\
 \midrule
-Proj.\ SGD    & 0.2015 & 90.8\% & 0.738 & 17 & 3.00  \\
-SFW-Paper     & 0.2162 & 98.3\% & 0.415 & 38 & 3.00  \\
-\textbf{FW-VC}& \textbf{0.2201} & \textbf{93.1\%} & \textbf{0.754} & \textbf{16} & \textbf{3.00} \\
+Proj.\ SGD    & 0.2015 & 90.8\% & 0.738 & 17 \\
+SFW-Paper     & 0.2162 & 98.3\% & 0.415 & 38 \\
+\textbf{FW-VC}& \textbf{0.2201} & \textbf{93.1\%} & \textbf{0.754} & \textbf{16} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -408,17 +408,17 @@ methods on datasets with no redundant features.
 \centering
 \caption{Final results on the Breast Cancer dataset (40 epochs).}
 \label{tab:bc}
-\small
-\begin{tabular}{lccccc}
+\footnotesize
+\begin{tabular}{lcccc}
 \toprule
-Method & Test Loss & Test Acc & Sparsity & NNZ & $\norm{w}_1$ \\
+Method & Test Loss & Test Acc & Sparsity & NNZ \\
 \midrule
-SGD           & 0.0814 & 98.2\% & 0.000 & 31 & 10.72 \\
-Adam          & 0.0710 & 98.2\% & 0.000 & 31 & 17.27 \\
+SGD           & 0.0814 & 98.2\% & 0.000 & 31 \\
+Adam          & 0.0710 & 98.2\% & 0.000 & 31 \\
 \midrule
-Proj.\ SGD    & 0.1373 & 98.2\% & 0.194 & 25 & 5.00  \\
-SFW-Paper     & 0.1724 & 98.2\% & 0.032 & 30 & 4.62  \\
-\textbf{FW-VC}& \textbf{0.2240} & \textbf{93.9\%} & \textbf{0.290} & \textbf{22} & \textbf{4.98} \\
+Proj.\ SGD    & 0.1373 & 98.2\% & 0.194 & 25 \\
+SFW-Paper     & 0.1724 & 98.2\% & 0.032 & 30 \\
+\textbf{FW-VC}& \textbf{0.2240} & \textbf{93.9\%} & \textbf{0.290} & \textbf{22} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -441,7 +441,7 @@ both datasets.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{plots/digits_dashboard.png}
+\includegraphics[width=\columnwidth]{digits_dashboard.png}
 \caption{Training dashboard for the Digits dataset. Each panel shows
 one metric across all five methods. The bottom-right panel shows
 the per-epoch mean step size $\gamma_t$ for the two FW methods.}
@@ -450,7 +450,7 @@ the per-epoch mean step size $\gamma_t$ for the two FW methods.}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{plots/digits_fw_gap.png}
+\includegraphics[width=\columnwidth]{digits_fw_gap.png}
 \caption{Frank-Wolfe duality gap across training on the Digits dataset.
 FW-VC maintains a slightly higher gap than SFW-Paper, reflecting its
 larger step sizes in late training; both gaps decrease across epochs,
@@ -470,7 +470,7 @@ both FW methods have comparable late-phase stability.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{plots/digits_stability.png}
+\includegraphics[width=\columnwidth]{digits_stability.png}
 \caption{Rolling standard deviation of training loss (window = 5) on
 Digits. Lower values indicate more stable convergence.}
 \label{fig:stability}
@@ -488,7 +488,7 @@ $\gamma_{\max}$ benefit from targeted tuning.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\columnwidth]{plots/digits_sensitivity.png}
+\includegraphics[width=\columnwidth]{digits_sensitivity.png}
 \caption{One-at-a-time hyperparameter sensitivity of FW-VC on Digits.
 Each subplot varies one parameter while holding others at their tuned
 values.}
@@ -550,7 +550,7 @@ experiment orchestration and sensitivity analysis
 (\texttt{src/experiments}), and shared numerical utilities
 (\texttt{src/utils}). The entry point \texttt{run.py} reproduces all
 results and figures. All code is available at
-\url{https://github.com/<your-username>/fw_vc_project}.
+\url{https://github.com/VaishnaviNasery/fw-vc-project}.
 
 Numerical stability is ensured throughout: logits are clipped to
 $[-50, 50]$ before sigmoid evaluation, gradients are norm-clipped to
